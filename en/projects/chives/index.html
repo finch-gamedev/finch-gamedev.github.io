@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="A local-first trading workbench for Taiwan stocks: record trades and P&amp;L across brokerage accounts, backtest and validate trading rules on historical data, then practise with paper trading."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/en/projects/chives/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="chives"><meta property="og:description" content="A local-first trading workbench for Taiwan stocks: record trades and P&amp;L across brokerage accounts, backtest and validate trading rules on historical data, then practise with paper trading."><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/en/projects/chives/"><title>chives</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/en/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/en/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> About </a><a href="/en/projects" class="no-underline px-1 bg-fg text-bg"> Projects </a><a href="/en/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> Blog </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <a href="/projects/chives" class="no-underline px-1">zh</a>  <span class="text-muted">/</span> <span class="bg-fg text-bg px-1">en</span>  </div> <button id="theme-toggle" type="button" aria-label="toggle theme" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/en/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">chives</h1> <p class="mt-2 text-muted">A local-first trading workbench for Taiwan stocks: record trades and P&amp;L across brokerage accounts, backtest and validate trading rules on historical data, then practise with paper trading.</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">date</dt> <dd> <time datetime="2026-11-20T00:00:00.000Z">11/20/2026</time> </dd>  <dt class="text-muted">tags</dt> <dd>#tool #web #python #fastapi #react #typescript</dd>    <dt class="text-muted">url</dt> <dd><a href="https://chives-demo.netlify.app/" target="_blank" rel="noopener noreferrer">https://chives-demo.netlify.app/</a></dd>  </dl> </header>   <h2 id="overview">Overview</h2>
+<p>A workbench for individuals who want to study Taiwan stock trading strategies seriously. It doesn’t connect to a broker, place orders, or recommend stocks. Instead it keeps record-keeping, research and practice in one place, and all data stays on your own computer.</p>
+<p>The link above is a <strong>static demo</strong>: the same interface and code as the real app, running entirely on a synthetic “demo market”. No sign-in, and it never contacts an outside service.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Multi-account ledger</strong>: record trades, cost basis and realised P&amp;L across several brokerage accounts, and reconcile them line by line against broker statements.</li>
+<li><strong>Historical data</strong>: import years of dividend-adjusted daily bars, and keep the exchanges’ official delisting and ex-rights lists to check the data for gaps.</li>
+<li><strong>Strategy research</strong>: backtest a trading rule, then test it in stages (research period, validation period, held-out test) with parameter sensitivity comparisons, so a rule isn’t just fitted to the past.</li>
+<li><strong>Paper trading</strong>: run a researched rule forward on later market data to see how it actually behaves.</li>
+<li><strong>Beginner guidance</strong>: a goal choice on first use, a step-by-step guide, a glossary cheat sheet and a learning centre.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<p>All screenshots come from the demo; market data, prices and accounts are synthetic. The interface is shown in Traditional Chinese.</p>
+<p><img alt="Ledger overview" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/ledger.DN8Q1gvI_19sJaR.webp">
+<em>Ledger overview: realised and unrealised P&amp;L, position value and fees across accounts, with each holding listed below</em></p>
+<p><img alt="Backtest equity curve" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/backtest-curve.DHuTinXr_2uY1BY.webp">
+<em>Backtest equity curve: the portfolio compared with equal-weight buy-and-hold and equal-weight monthly investing, with the daily stock allocation below</em></p>
+<p><img alt="Staged research" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/staged-research.DRynaWsn_Z2qA0mX.webp">
+<em>Staged research: work through the research period, validation period, frozen settings and a single held-out test before writing a conclusion, with each period’s dates and data coverage shown</em></p>
+<h2 id="stack">Stack</h2>
+<p>Built through AI-assisted development with Claude Code: I owned the requirements, feature planning and acceptance review, and the code was mostly written by AI.</p>
+<ul>
+<li>Python + FastAPI + SQLAlchemy backend with local SQLite; React + TypeScript + Vite frontend</li>
+<li>30+ Playwright browser suites, checking every page at desktop and mobile widths</li>
+<li>The demo is built by running the real backend on a synthetic market, recording every response, and assembling a server-free static site; an automated scan checks that no real account, token or personal data is included before publishing</li>
+<li>Double-click launcher and one-click in-app updates</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>I built this to find out whether a trading idea actually works, rather than going on gut feeling. The hardest part was not fooling myself: a backtest can easily just fit the past, so the research flow deliberately splits data into research, validation and held-out periods, and parameters can’t be tuned again once they’re frozen.</p>
+<p>The other priority was keeping data on my own machine. Ledgers and research results are personal, so the whole tool runs locally; to show it to others, I generate a completely separate demo from synthetic data.</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/en/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ back to top </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

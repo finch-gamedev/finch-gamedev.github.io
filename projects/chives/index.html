@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-TW"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="放在自己電腦上的台股交易筆記本與練習場：記錄多個券商帳戶的成交與損益，用歷史資料回測、驗證交易規則，再用紙上交易練習。"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/projects/chives/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="交易工作台 chives"><meta property="og:description" content="放在自己電腦上的台股交易筆記本與練習場：記錄多個券商帳戶的成交與損益，用歷史資料回測、驗證交易規則，再用紙上交易練習。"><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/projects/chives/"><title>交易工作台 chives</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> 關於 </a><a href="/projects" class="no-underline px-1 bg-fg text-bg"> 作品 </a><a href="/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> 部落格 </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <span class="bg-fg text-bg px-1">zh</span>  <span class="text-muted">/</span> <a href="/en/projects/chives/" class="no-underline px-1">en</a>  </div> <button id="theme-toggle" type="button" aria-label="切換主題" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">交易工作台 chives</h1> <p class="mt-2 text-muted">放在自己電腦上的台股交易筆記本與練習場：記錄多個券商帳戶的成交與損益，用歷史資料回測、驗證交易規則，再用紙上交易練習。</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">日期</dt> <dd> <time datetime="2026-11-20T00:00:00.000Z">2026/11/20</time> </dd>  <dt class="text-muted">標籤</dt> <dd>#tool #web #python #fastapi #react #typescript</dd>    <dt class="text-muted">網址</dt> <dd><a href="https://chives-demo.netlify.app/" target="_blank" rel="noopener noreferrer">https://chives-demo.netlify.app/</a></dd>  </dl> </header>   <h2 id="概述">概述</h2>
+<p>給想認真研究台股交易策略的個人使用的工作台。它不連券商、不幫你下單，也不推薦股票；它做的是把「記帳、研究、練習」放在同一個地方，而且所有資料只存在自己的電腦上。</p>
+<p>上方連結是<strong>靜態展示版</strong>：畫面和程式與正式版相同，資料全部是合成的「示範市場」，不需要登入，也不會連到任何外部服務。</p>
+<h2 id="特色">特色</h2>
+<ul>
+<li><strong>多帳戶帳務</strong>：記錄多個券商帳戶的成交、成本與已實現損益，並和券商對帳單逐筆核對。</li>
+<li><strong>歷史資料</strong>：匯入多年、已還原除權息的台股日線；另外累積交易所官方的終止上市與除權息清單，用來檢查資料有沒有缺漏。</li>
+<li><strong>策略研究</strong>：把一個交易規則拿去回測，再用「研究區間、驗證區間、保留測試」分段檢驗，加上參數敏感度比較，避免只是剛好在過去有效。</li>
+<li><strong>紙上交易</strong>：用研究過的規則在之後的行情上模擬交易，看實際表現。</li>
+<li><strong>給新手的引導</strong>：第一次使用先選目標，搭配逐步導覽、名詞小抄與學習中心。</li>
+</ul>
+<h2 id="畫面">畫面</h2>
+<p>以下截圖皆來自展示版，行情、價格與帳戶都是合成的測試資料。</p>
+<p><img alt="帳務總覽" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/ledger.DN8Q1gvI_19sJaR.webp">
+<em>帳務總覽：彙整各帳戶的已實現與未實現損益、持倉估值與交易費稅，下方列出每檔持倉明細</em></p>
+<p><img alt="回測資產曲線" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/backtest-curve.DHuTinXr_2uY1BY.webp">
+<em>回測資產曲線：組合與等權買進持有、等權定期定額並列比較，下方為每日股票投入比例</em></p>
+<p><img alt="分段研究流程" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/staged-research.DRynaWsn_Z2qA0mX.webp">
+<em>分段研究：依序完成研究區間、驗證區間、凍結設定、一次保留測試，再寫下結論；每段的日期與資料涵蓋都列得清楚</em></p>
+<h2 id="技術">技術</h2>
+<p>本專案以 Claude Code 進行 AI 協作開發：我負責需求、功能規劃與驗收，程式碼主要由 AI 撰寫。</p>
+<ul>
+<li>後端 Python + FastAPI + SQLAlchemy，資料存在本機 SQLite；前端 React + TypeScript + Vite</li>
+<li>用 Playwright 跑三十多組瀏覽器測試，每頁都檢查桌面與手機版面</li>
+<li>展示版是用真正的後端在合成市場上跑一遍，把每個回應錄下來，再組成不需要伺服器的靜態網站；發布前會自動掃描，確認裡面沒有任何真實帳戶、權杖或個人資料</li>
+<li>雙擊啟動，畫面上一鍵更新</li>
+</ul>
+<h2 id="心得">心得</h2>
+<p>做這個工具的出發點，是想知道一個交易想法到底有沒有用，而不是憑感覺。過程中最花心思的是「不要騙自己」：回測很容易只是剛好擬合了過去，所以研究流程刻意把資料切成研究、驗證、保留測試三段，參數一旦凍結就不能再回頭調。</p>
+<p>另一個重點是資料不出自己的電腦。帳務和研究結果都很私人，所以整個工具設計成在本機執行；要給別人看時，就用合成資料做出完全獨立的展示版。</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ 回到頂端 </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

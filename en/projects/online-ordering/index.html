@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="An online ordering system for small restaurants. Customers order, pick a pickup time and pay online; the owner takes orders, prints tickets and manages the menu and stock from an admin panel, all on free-tier services."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/en/projects/online-ordering/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="Online Ordering System"><meta property="og:description" content="An online ordering system for small restaurants. Customers order, pick a pickup time and pay online; the owner takes orders, prints tickets and manages the menu and stock from an admin panel, all on free-tier services."><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/en/projects/online-ordering/"><title>Online Ordering System</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/en/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/en/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> About </a><a href="/en/projects" class="no-underline px-1 bg-fg text-bg"> Projects </a><a href="/en/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> Blog </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <a href="/projects/online-ordering" class="no-underline px-1">zh</a>  <span class="text-muted">/</span> <span class="bg-fg text-bg px-1">en</span>  </div> <button id="theme-toggle" type="button" aria-label="toggle theme" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/en/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">Online Ordering System</h1> <p class="mt-2 text-muted">An online ordering system for small restaurants. Customers order, pick a pickup time and pay online; the owner takes orders, prints tickets and manages the menu and stock from an admin panel, all on free-tier services.</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">date</dt> <dd> <time datetime="2026-05-27T00:00:00.000Z">05/27/2026</time> </dd>  <dt class="text-muted">tags</dt> <dd>#tool #web #nextjs #react #typescript</dd>    <dt class="text-muted">url</dt> <dd><a href="https://online-ordering-plum.vercel.app/" target="_blank" rel="noopener noreferrer">https://online-ordering-plum.vercel.app/</a></dd>  </dl> </header>   <h2 id="overview">Overview</h2>
+<p>A pickup and dine-in ordering system for small restaurants. Customers open a web page on their phone to order, choose a pickup time and pay; the owner takes orders, prints tickets and manages the menu and stock from an admin panel. The database and hosting both run on free tiers, so there’s no monthly fee, and a restaurant is already using it in production.</p>
+<p>The link above is a demo where you can try the customer ordering flow.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Customer ordering</strong>: browse the menu by tag, with custom options and add-ons; order for now or book a time slot, with only slots inside business hours offered.</li>
+<li><strong>Multiple payment methods</strong>: cash, LINE Pay and ECPay credit card.</li>
+<li><strong>Dine-in table ordering</strong>: each table gets its own QR code that fills in the table number when scanned.</li>
+<li><strong>Admin panel</strong>: order intake and status tracking, ordering on a customer’s behalf, automatic stock deduction, menu editing with CSV import/export, and sales reports.</li>
+<li><strong>Printing and notifications</strong>: Bluetooth, USB, WiFi and serial receipt printers; new-order alerts via LINE, Discord, Telegram or email.</li>
+<li><strong>Loyalty points</strong>, a <strong>bilingual interface</strong> (Traditional Chinese / English), and theming with dark mode configurable from the admin panel.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<p>All screenshots use the demo’s test data. The interface is shown in Traditional Chinese.</p>
+<h3 id="customer-side">Customer side</h3>
+<p><img alt="Customer menu" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/customer-menu.FfFMIOmm_YJ1pn.webp">
+<em>Customer menu: filter items by tag; sold-out items are disabled automatically</em></p>
+<p><img alt="Custom options on mobile" loading="lazy" decoding="async" width="780" height="1688" src="/_astro/customer-options-mobile.OnwuCmmj_Z24uc9k.webp">
+<em>Custom options on mobile: single-choice noodle and sauce options, add-ons with quantities, sold-out choices disabled</em></p>
+<h3 id="admin-panel">Admin panel</h3>
+<p><img alt="Admin dashboard" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-dashboard.DyNCoJzU_Zzhr4a.webp">
+<em>Admin dashboard: pending, today’s and total order counts, plus shortcuts to each feature</em></p>
+<p><img alt="Order management" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-orders.W2U88XiB_1qiiQ6.webp">
+<em>Order management: filter by status; each order shows items, add-ons, payment method and pickup time</em></p>
+<p><img alt="Sales report" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-report.hGp8nYPz_Z2gYsnY.webp">
+<em>Sales report: pick a date range to see revenue, order status, best sellers and payment methods</em></p>
+<p><img alt="Appearance theme" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-theme.CRiYgLF8_2lR5hA.webp">
+<em>Appearance theme: choose a palette or custom colours with a live preview of the storefront</em></p>
+<h2 id="stack">Stack</h2>
+<p>Built through AI-assisted development with Claude Code: I owned the requirements, feature planning and acceptance review, and the code was mostly written by AI.</p>
+<ul>
+<li>Next.js (App Router) + React + TypeScript + Tailwind CSS, deployed on Vercel</li>
+<li>The database can be switched between Google Sheets and Supabase (PostgreSQL); both share a single schema definition and migrate automatically when columns change</li>
+<li>Payments via LINE Pay and ECPay; image uploads via Cloudinary</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>I built this for a friend’s restaurant. The brief was clear: they wanted their own online ordering, without paying a monthly fee for it. So from the first version, running entirely on free tiers was a given. Orders are stored straight in Google Sheets, so the owner can open the spreadsheet to see them, and the site runs on Vercel’s free plan.</p>
+<p>As features piled up, I also left room to grow: the data layer is built on one shared schema definition, so when the data outgrows a spreadsheet the restaurant can move to Supabase without rewriting the system.</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/en/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ back to top </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

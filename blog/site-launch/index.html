@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="zh-TW"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="介紹這個網站、我是誰，以及之後會在這裡寫些什麼。"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/blog/site-launch/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="網站開張"><meta property="og:description" content="介紹這個網站、我是誰，以及之後會在這裡寫些什麼。"><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/blog/site-launch/"><title>網站開張</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> 關於 </a><a href="/projects" class="no-underline px-1 hover:bg-fg hover:text-bg"> 作品 </a><a href="/blog" class="no-underline px-1 bg-fg text-bg"> 部落格 </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <span class="bg-fg text-bg px-1">zh</span>  <span class="text-muted">/</span> <a href="/en/blog/site-launch/" class="no-underline px-1">en</a>  </div> <button id="theme-toggle" type="button" aria-label="切換主題" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/blog" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">網站開張</h1> <div class="mt-2 flex flex-wrap gap-3 text-xs text-muted"> <time datetime="2026-11-21T00:00:00.000Z">2026/11/21</time> <span>#meta</span> </div> </header>  <p>歡迎來到我的個人網站。我是 finch，一名遊戲前端工程師，從 2017 年開始在遊戲業工作，主要使用 Unity 與 Cocos Creator 開發手機和網頁遊戲。</p>
+<h2 id="這裡有什麼">這裡有什麼</h2>
+<ul>
+<li><strong><a href="/projects">作品</a></strong>：工作之外完成的個人專案，例如洗標製作工具 Care Label Maker，以及台股交易工作台 chives。每個作品都附有說明、使用技術與開發心得。</li>
+<li><strong><a href="/about">關於</a></strong>：我的經歷與技能。</li>
+<li><strong>部落格</strong>：也就是你正在看的地方。</li>
+</ul>
+<h2 id="之後會寫什麼">之後會寫什麼</h2>
+<p>這幾年在遊戲專案裡累積了不少經驗，想陸續整理成文章，例如：</p>
+<ul>
+<li>遊戲載入時間的優化方式</li>
+<li>熱更新機制的導入與維護</li>
+<li>Unity 與 Android、iOS 原生功能的整合</li>
+<li>手機與 HTML5 遊戲的建置、部署自動化</li>
+</ul>
+<p>另外也會記錄個人專案的開發過程，包括設計上的取捨，以及踩過的坑。</p>
+<blockquote>
+<p>網站本身用 Astro 建置，原始碼放在私人 repo，每次更新都會自動部署。</p>
+</blockquote>
+<p>如果想聯絡我，可以到<a href="/about">關於</a>頁面找到 email 與 GitHub。</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/blog" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ 回到頂端 </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

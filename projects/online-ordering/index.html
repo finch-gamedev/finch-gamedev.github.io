@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh-TW"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="給小型餐飲店的線上點餐系統：顧客線上點餐、選擇取餐時間並付款，店家在後台接單、出單、管理菜單與庫存，全部建立在免費方案上。"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/projects/online-ordering/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="線上點餐系統"><meta property="og:description" content="給小型餐飲店的線上點餐系統：顧客線上點餐、選擇取餐時間並付款，店家在後台接單、出單、管理菜單與庫存，全部建立在免費方案上。"><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/projects/online-ordering/"><title>線上點餐系統</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> 關於 </a><a href="/projects" class="no-underline px-1 bg-fg text-bg"> 作品 </a><a href="/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> 部落格 </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <span class="bg-fg text-bg px-1">zh</span>  <span class="text-muted">/</span> <a href="/en/projects/online-ordering/" class="no-underline px-1">en</a>  </div> <button id="theme-toggle" type="button" aria-label="切換主題" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">線上點餐系統</h1> <p class="mt-2 text-muted">給小型餐飲店的線上點餐系統：顧客線上點餐、選擇取餐時間並付款，店家在後台接單、出單、管理菜單與庫存，全部建立在免費方案上。</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">日期</dt> <dd> <time datetime="2026-05-27T00:00:00.000Z">2026/05/27</time> </dd>  <dt class="text-muted">標籤</dt> <dd>#tool #web #nextjs #react #typescript</dd>    <dt class="text-muted">網址</dt> <dd><a href="https://online-ordering-plum.vercel.app/" target="_blank" rel="noopener noreferrer">https://online-ordering-plum.vercel.app/</a></dd>  </dl> </header>   <h2 id="概述">概述</h2>
+<p>為小型餐飲店打造的到店取餐與內用點餐系統。顧客用手機打開網頁就能點餐、選擇取餐時間並付款；店家在後台接單、出單、管理菜單與庫存。資料庫與部署都使用免費方案，不需要月費，目前已有店家實際上線使用。</p>
+<p>上方連結是展示版，可以直接試用顧客點餐的流程。</p>
+<h2 id="特色">特色</h2>
+<ul>
+<li><strong>顧客點餐</strong>：依標籤瀏覽菜單，支援客製選項與加料；可選即時取餐或預約時段，時段只會顯示營業時間內的選項。</li>
+<li><strong>多種付款方式</strong>：現金、LINE Pay、ECPay 信用卡。</li>
+<li><strong>內用桌號點餐</strong>：每桌產生專屬 QR Code，顧客掃描後自動帶入桌號。</li>
+<li><strong>店家後台</strong>：訂單接單與狀態管理、幫客人點餐、庫存自動扣減、菜單編輯與 CSV 匯入匯出、營業報表。</li>
+<li><strong>出單與通知</strong>：支援藍牙、USB、WiFi 與序列埠出單機；新訂單可透過 LINE、Discord、Telegram 或 email 通知店家。</li>
+<li><strong>顧客集點</strong>、<strong>中英雙語介面</strong>，以及可在後台調整的主題與深色模式。</li>
+</ul>
+<h2 id="畫面">畫面</h2>
+<p>以下截圖皆為展示版的測試資料。</p>
+<h3 id="顧客端">顧客端</h3>
+<p><img alt="顧客端菜單" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/customer-menu.FfFMIOmm_YJ1pn.webp">
+<em>顧客端菜單：依標籤篩選品項，售完的品項會自動停用</em></p>
+<p><img alt="手機上的客製選項" loading="lazy" decoding="async" width="780" height="1688" src="/_astro/customer-options-mobile.OnwuCmmj_Z24uc9k.webp">
+<em>手機上的客製選項：麵體、口味單選，加料可調數量，售完選項自動停用</em></p>
+<h3 id="店家後台">店家後台</h3>
+<p><img alt="後台儀表板" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-dashboard.DyNCoJzU_Zzhr4a.webp">
+<em>後台儀表板：待接單、今日與全部訂單數，以及各功能入口</em></p>
+<p><img alt="訂單管理" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-orders.W2U88XiB_1qiiQ6.webp">
+<em>訂單管理：依狀態篩選，每張訂單顯示品項、加料、付款方式與取餐時間</em></p>
+<p><img alt="營業報表" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-report.hGp8nYPz_Z2gYsnY.webp">
+<em>營業報表：可選日期區間，統計收款、訂單狀態、熱銷品項與付款方式</em></p>
+<p><img alt="外觀主題" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/admin-theme.CRiYgLF8_2lR5hA.webp">
+<em>外觀主題：選擇配色或自訂顏色，並即時預覽前台效果</em></p>
+<h2 id="技術">技術</h2>
+<p>本專案以 Claude Code 進行 AI 協作開發：我負責需求、功能規劃與驗收，程式碼主要由 AI 撰寫。</p>
+<ul>
+<li>Next.js（App Router）+ React + TypeScript + Tailwind CSS，部署在 Vercel</li>
+<li>資料庫可在 Google Sheets 與 Supabase（PostgreSQL）之間切換，兩者共用同一份資料結構定義，欄位變更時自動遷移</li>
+<li>金流串接 LINE Pay 與 ECPay；圖片上傳使用 Cloudinary</li>
+</ul>
+<h2 id="心得">心得</h2>
+<p>這個系統是幫朋友的店做的。當時的需求很明確：想要有自己的線上點餐，但不想負擔每個月的系統費用。所以從第一版開始，就把「全部用免費方案」當成前提：資料直接存在 Google Sheets，店家打開試算表就能看到訂單；網站部署在 Vercel 的免費方案上。</p>
+<p>隨著功能越加越多，也預留了往上擴充的路：資料層抽象成同一份結構定義，資料量變大時可以改用 Supabase，而不必重寫整個系統。</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ 回到頂端 </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

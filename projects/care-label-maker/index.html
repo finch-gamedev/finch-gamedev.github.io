@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="zh-TW"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="在瀏覽器裡組合洗滌符號與文字，自動排版成標籤紙，直接列印或輸出 PDF。"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/projects/care-label-maker/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="洗標製作工具 Care Label Maker"><meta property="og:description" content="在瀏覽器裡組合洗滌符號與文字，自動排版成標籤紙，直接列印或輸出 PDF。"><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/projects/care-label-maker/"><title>洗標製作工具 Care Label Maker</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> 關於 </a><a href="/projects" class="no-underline px-1 bg-fg text-bg"> 作品 </a><a href="/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> 部落格 </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <span class="bg-fg text-bg px-1">zh</span>  <span class="text-muted">/</span> <a href="/en/projects/care-label-maker/" class="no-underline px-1">en</a>  </div> <button id="theme-toggle" type="button" aria-label="切換主題" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">洗標製作工具 Care Label Maker</h1> <p class="mt-2 text-muted">在瀏覽器裡組合洗滌符號與文字，自動排版成標籤紙，直接列印或輸出 PDF。</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">日期</dt> <dd> <time datetime="2026-05-26T00:00:00.000Z">2026/05/26</time> </dd>  <dt class="text-muted">標籤</dt> <dd>#tool #web #react #typescript</dd>    <dt class="text-muted">網址</dt> <dd><a href="https://care-label-maker.finch-gamedev.workers.dev/" target="_blank" rel="noopener noreferrer">https://care-label-maker.finch-gamedev.workers.dev/</a></dd>  </dl> </header>   <h2 id="概述">概述</h2>
+<p>給小品牌、手作者自己做衣物洗標的網頁工具。挑選洗滌符號、加上品牌與成分文字，設定標籤尺寸後，工具會自動排滿 A4、Letter 或捲筒標籤紙，直接列印或輸出 PDF。不用安裝、不用帳號，資料存在瀏覽器裡。</p>
+<h2 id="特色">特色</h2>
+<ul>
+<li><strong>完整的 ISO 3758 符號</strong>：洗滌、漂白、乾燥、熨燙、專業清洗五大類共 61 個符號。</li>
+<li><strong>預覽即成品</strong>：預覽、列印、PDF 共用同一份以 mm 為單位的 SVG，螢幕上看到的就是印出來的尺寸。</li>
+<li><strong>自由組合內容</strong>：文字與符號區塊可任意堆疊、排序；符號放不下時標籤會自動增高，不會超出框線。</li>
+<li><strong>中英雙語介面</strong>。</li>
+</ul>
+<h2 id="畫面">畫面</h2>
+<p><img alt="主畫面" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/editor.qFsRaAfd_113vYc.webp">
+<em>主畫面：左邊挑選洗滌符號，中間即時預覽排滿 A4 的標籤紙，右邊設定區塊內容與尺寸</em></p>
+<p><img alt="預覽放大" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/preview-zoom.CkUx1GFJ_No03A.webp">
+<em>預覽放大：符號以參數化生成，線寬一致；虛線為裁切框線</em></p>
+<h2 id="技術">技術</h2>
+<p>本專案以 Claude Code 進行 AI 協作開發：我負責需求、功能規劃與驗收，程式碼主要由 AI 撰寫。</p>
+<ul>
+<li>React + TypeScript + Vite，純前端，部署在 Cloudflare Workers</li>
+<li>符號以「基底形狀 + 修飾」參數化生成，線寬一致，也不依賴第三方美術素材</li>
+<li>PDF 輸出使用 svg2pdf.js + jsPDF；狀態以 Zustand 管理並存在 localStorage</li>
+</ul>
+<h2 id="心得">心得</h2>
+<p>這個工具的起點很單純：有朋友在蝦皮經營服飾賣場，每件衣服都需要洗標。市面上的做法不是找廠商訂製，就是自己用繪圖軟體一個個拼符號，數量少的小賣家兩種都不划算。所以我想做一個打開網頁就能用的工具，讓他們自己挑符號、排版、印出來。</p>
+<p>因為是真的要拿去印的東西，我最在意的是「螢幕上看到的，就是印出來的樣子」。所以一開始就把預覽、列印、PDF 都建立在同一份 SVG 上，而不是做好之後再一個個去對齊尺寸。這個決定讓後面加功能時省了很多麻煩。</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← 返回 </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ 回到頂端 </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.4.12"><meta name="description" content="Compose laundry care symbols and text in the browser, auto-arrange them on label sheets, then print or export to PDF."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://finch-gamedev.github.io/en/projects/care-label-maker/"><link rel="alternate" type="application/rss+xml" title="finch blog" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"><meta property="og:title" content="Care Label Maker"><meta property="og:description" content="Compose laundry care symbols and text in the browser, auto-arrange them on label sheets, then print or export to PDF."><meta property="og:type" content="website"><meta property="og:url" content="https://finch-gamedev.github.io/en/projects/care-label-maker/"><title>Care Label Maker</title><script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DpftCx4u.css"></head> <body> <header class="border-b border-border"> <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4"> <a href="/en/" class="font-bold no-underline hover:bg-transparent hover:text-fg">
+finch<span class="cursor"></span> </a> <nav class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm"> <a href="/en/about" class="no-underline px-1 hover:bg-fg hover:text-bg"> About </a><a href="/en/projects" class="no-underline px-1 bg-fg text-bg"> Projects </a><a href="/en/blog" class="no-underline px-1 hover:bg-fg hover:text-bg"> Blog </a> <span class="text-muted">|</span> <div class="flex items-center gap-1">   <a href="/projects/care-label-maker" class="no-underline px-1">zh</a>  <span class="text-muted">/</span> <span class="bg-fg text-bg px-1">en</span>  </div> <button id="theme-toggle" type="button" aria-label="toggle theme" class="cursor-pointer border-0 bg-transparent px-1 font-mono text-fg hover:bg-fg hover:text-bg"> <span class="dark:hidden">[light]</span> <span class="hidden dark:inline">[dark]</span> </button><script type="module">document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`)});</script> </nav> </div> </header> <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">  <a href="/en/projects" class="text-sm no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <article class="prose-mono mt-6"> <header class="mb-6 border-b border-border pb-4"> <h1 class="text-2xl font-bold">Care Label Maker</h1> <p class="mt-2 text-muted">Compose laundry care symbols and text in the browser, auto-arrange them on label sheets, then print or export to PDF.</p> <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs"> <dt class="text-muted">date</dt> <dd> <time datetime="2026-05-26T00:00:00.000Z">05/26/2026</time> </dd>  <dt class="text-muted">tags</dt> <dd>#tool #web #react #typescript</dd>    <dt class="text-muted">url</dt> <dd><a href="https://care-label-maker.finch-gamedev.workers.dev/" target="_blank" rel="noopener noreferrer">https://care-label-maker.finch-gamedev.workers.dev/</a></dd>  </dl> </header>   <h2 id="overview">Overview</h2>
+<p>A web tool for small brands and makers to create their own clothing care labels. Pick care symbols, add brand and fabric text, set the label size, and the tool tiles the labels onto A4, Letter, or roll label stock, ready to print or export as PDF. No install, no account; your work is saved in the browser.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Full ISO 3758 symbol set</strong>: 61 symbols across washing, bleaching, drying, ironing, and professional care.</li>
+<li><strong>What you see is what prints</strong>: the preview, browser printing, and PDF export all render from the same millimetre-based SVG, so on-screen sizes match the printed result.</li>
+<li><strong>Flexible content</strong>: stack and reorder text and symbol blocks freely; when symbols don’t fit, the label grows taller instead of overflowing.</li>
+<li><strong>Bilingual interface</strong> (Traditional Chinese / English).</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<p>The interface is shown in Traditional Chinese; it can be switched to English.</p>
+<p><img alt="Main screen" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/editor.qFsRaAfd_113vYc.webp">
+<em>Main screen: pick care symbols on the left, see the A4 label sheet update live in the middle, and set block content and sizes on the right</em></p>
+<p><img alt="Zoomed preview" loading="lazy" decoding="async" width="1920" height="1200" src="/_astro/preview-zoom.CkUx1GFJ_No03A.webp">
+<em>Zoomed preview: symbols are generated parametrically with consistent line weights; dashed lines mark where to cut</em></p>
+<h2 id="stack">Stack</h2>
+<p>Built through AI-assisted development with Claude Code: I owned the requirements, feature planning and acceptance review, and the code was mostly written by AI.</p>
+<ul>
+<li>React + TypeScript + Vite, fully client-side, deployed on Cloudflare Workers</li>
+<li>Symbols are generated parametrically from base shapes plus modifiers, giving consistent line weights with no third-party artwork</li>
+<li>PDF export via svg2pdf.js + jsPDF; state managed with Zustand and persisted to localStorage</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>This started with a simple need: a friend runs a clothing shop on Shopee, and every garment needs a care label. The usual options are ordering labels from a supplier or piecing symbols together in a design app, and neither makes sense for a small seller with low volumes. So I set out to build something that works straight from a web page, letting them pick symbols, lay out labels, and print on their own.</p>
+<p>Because these labels actually get printed, what mattered most to me was that the screen matches the paper. So from the start, I built the preview, printing, and PDF export on a single SVG source, instead of trying to line up the sizes of each output after the fact. That decision saved a lot of trouble as features were added.</p>
+  </article> <nav class="mt-12 flex justify-between border-t border-border pt-4 text-sm"> <a href="/en/projects" class="no-underline text-muted hover:bg-fg hover:text-bg"> ← back </a> <a href="#" class="no-underline text-muted hover:bg-fg hover:text-bg"> ↑ back to top </a> </nav>  </main> <footer class="mt-auto border-t border-border"> <div class="mx-auto flex max-w-3xl flex-col gap-1 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between"> <span>© 2026 finch</span> <span>built with Astro</span> </div> </footer> </body> </html>
